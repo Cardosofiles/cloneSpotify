@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html
+  class="scrollbar-thin rounded-full scrollbar-thumb-zinc-100 scrollbar-track-zinc-950"
+  lang="en"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <link
+      rel="shortcut icon"
+      href="./src/img/icone-spotify.svg"
+      type="image/x-icon Spotify"
+    />
+    <script src="./src/js/lucide.js" defer></script>
+    <title>Spotify - Web Player: Music for everyone</title>
+  </head>
+  <body class="h-screen bg-zinc-950 text-zinc-100">
+    <div class="h-screen flex flex-col">
+      <div class="flex flex-1">
+        <aside class="w-80 bg-zinc-950 sm:w-auto p-2">
+          <nav
+            class="w-auto p-2 mb-2 space-y-4 bg-zinc-800 opacity-95 rounded-md"
+          >
+            <a
+              href=""
+              class="flex items-center gap-3 text-sm font-semibold text-zinc-200"
+              ><i data-lucide="home"></i>Home</a
+            >
+            <a
+              href=""
+              class="flex items-center gap-3 text-sm font-semibold text-zinc-200"
+              ><i data-lucide="search"></i>Search</a
+            >
+          </nav>
+
+          <nav
+            class="w-auto p-2 flex bg-zinc-800 opacity-95 rounded-t-lg justify-between"
+          >
+            <a
+              href=""
+              class="flex items-center gap-3 text-sm font-semibold text-zinc-200"
+              ><i data-lucide="library"></i>Your Library</a
+            >
+            <div class="flex gap-2">
+              <a href=""><i class="w-5 h-5" data-lucide="plus"></i></a>
+              <a href=""><i class="w-5 h-5" data-lucide="arrow-right"></i></a>
+            </div>
+          </nav>
+
+          <nav
+            class="w-auto p-2 mb-2 space-y-4 bg-zinc-800 opacity-95 rounded-b-lg"
+          >
+            <div class="flex gap-2">
+              <button class="bg-zinc-700 px-2 rounded-lg">Playlist</button>
+              <button class="bg-zinc-700 px-2 rounded-lg">
+                Podcast & Shows
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <i
+                class="w-4 h-4 cursor-pointer"
+                data-lucide="search"
+                onclick="showInput()"
+              ></i>
+              <input
+                id="searchInput"
+                class="hidden ml-2 bg-zinc-700 rounded-md py-1 px-2 focus:outline-none"
+                type="text"
+                placeholder="Search in Your Library"
+              />
+
+              <a href="#" class="flex justify-end items-center text-xs">
+                <span class="m-1">Recents</span>
+                <i
+                  class="items-center justify-center size-5"
+                  data-lucide="list"
+                ></i>
+              </a>
+            </div>
+
+            <!-- Playlists -->
+
+            <div class="flex flex-col gap-3">
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/public/victorLou.jpeg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Victor Lou Next Pro</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Victor Lou</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/alok.jpg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Annual 2021</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Alok</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/fluxZone.png"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Vibezindica fluxZone
+                  </span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Flux Zone
+                    </span>
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/visage.jpg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Visage Universal Records
+                  </span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist January 1, 1980</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/vintageCulture.webp"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Vintage Culture & Friends</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Friends 4</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded bg-slate-50"
+                  src="./src/img/seveenn.jpg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Winger Reveal Seven</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Upcoming</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded bg-slate-100"
+                  src="./src/img/ilusionize.jpeg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Ilusionize's Universe</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist House 2021</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/boris.jpg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Classic Collectors Box</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Boris Brejcha</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/dubdogz.jpeg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Just Like Team You Do</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Dubdogz Reezer</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded bg-slate-50"
+                  src="./src/img/liu.jpg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Run It Up Liu, Edson Faiolli</span
+                  >
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Liu</span
+                    >
+                  </div>
+                </span>
+              </button>
+
+              <button
+                class="pl-0 rounded-lg flex items-center gap-2 group hover:bg-zinc-700 hover:text-zinc-100"
+              >
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/imanbek.jpeg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col">
+                  <span class="text-zinc-400 group-hover:text-zinc-100"
+                    >Belly Dancer - Byor
+                  </span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span
+                      class="text-xs text-zinc-400 group-hover:text-zinc-100"
+                      >Playlist Imanbek 2022</span
+                    >
+                  </div>
+                </span>
+              </button>
+              <div class="flex-grow h-20"></div>
+              <div class="flex-grow h-20"></div>
+              <div class="flex-grow h-5"></div>
+            </div>
+          </nav>
+        </aside>
+
+        <main class="flex-1 p-2 bg-zinc-950 pl-0 pb-32">
+          <div class="bg-zinc-800 opacity-95 rounded-md flex flex-col">
+            <div class="items-center flex flex-row ml-1">
+              <button class="rounded-full bg-black/45 p-1 m-2">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="rounded-full bg-black/15 p-1">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <div class="ml-auto pr-4 flex gap-3 items-center">
+                <button class="flex items-center bg-zinc-700 px-2 rounded-lg">
+                  <i class="mr-1 w-4 h-4" data-lucide="circle-arrow-down"></i>
+                  <span class="ml-auto">Install App</span>
+                </button>
+
+                <button class="bg-zinc-700 p-1 rounded-full">
+                  <i class="w-4 h-4" data-lucide="bell"></i>
+                </button>
+                <button class="bg-zinc-700 p-1 rounded-full">
+                  <img
+                    class="w-4 h-4 rounded-full"
+                    src="./src/img/jb.jpg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="flex flex-row p-2 gap-3 ml-1 mr-4">
+              <a href="" class="bg-zinc-100 text-zinc-800 px-2 rounded-lg"
+                >All</a
+              >
+              <a href="" class="bg-zinc-700 px-2 rounded-lg">Music</a>
+              <a href="" class="bg-zinc-700 px-2 rounded-lg">Podcast</a>
+            </div>
+
+            <div class="p-2 grid grid-cols-4 gap-6 ml-1 mt-4 pr-4">
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/nbsplv.jpg"
+                  alt="Capa do Álbum" /><strong>The Lost Soul Down</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/gameOfThrones.jpg"
+                  alt="Capa do Álbum" /><strong>Ramin Djawadi</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/Eminem.jpg"
+                  alt="Capa do Álbum" /><strong>The Eminem Show</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/deboxe.jpeg"
+                  alt="Capa do Álbum" /><strong>Eletro Funk Deboxe</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img//dubDogz.jpg"
+                  alt="Capa do Álbum" /><strong>Dubdogz - Special Mix</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/vintage.jpg "
+                  alt="Capa do Álbum" /><strong>Vintage Promised Land</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/victorLouBalance.jpg"
+                  alt="Capa do Álbum" /><strong>Victor Lou Balance</strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+
+              <a
+                href=""
+                class="bg-white/10 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/20 transitions-colors"
+              >
+                <img
+                  class="w-20 h-20"
+                  src="./src/img/letGoFluxZone.jpeg"
+                  alt="Capa do Álbum" /><strong>Let Igt Go - Single by </strong>
+                <button
+                  class="w-12 h-12 flex items-center justify-center rounded-full bg-green-600 text-black ml-auto mr-4 invisible group-hover:visible"
+                >
+                  <i data-lucide="play"></i></button
+              ></a>
+            </div>
+
+            <!-- Playlist Made For -->
+
+            <div class="p-2 ml-1 mt-4 pr-4">
+              <a href="" class="font-semibold text-3xl"
+                >Made For João Batista</a
+              >
+
+              <div class="grid grid-cols-7 gap-4 mt-4">
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded group flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+                  <strong class="font-semibold">Natural - Duarte 2023</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img class="w-full h-120" src="./src/img/alok.jpg" alt="" />
+
+                  <strong class="font-semibold">Annual 2021</strong>
+                  <span class="text-xs text-zinc-500">Alok</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-full"
+                    src="./src/img/fluxZone.jpg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Vibezinca</strong>
+                  <span class="text-xs text-zinc-500">Flux Zone</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/img/vintageCulture.webp"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Culture & Friends</strong>
+                  <span class="text-xs text-zinc-500">Vintage Culture</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/img/dubdogz.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Just Like Team You Do</strong>
+                  <span class="text-xs text-zinc-500">Dubdogz Reezer</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 group rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/img/ilusionize.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">House 2021 Universe</strong>
+                  <span class="text-xs text-zinc-500">Ilusionize</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/img/imanbek.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Belly Dancer</strong>
+                  <span class="text-xs text-zinc-500">Imanbek, Byor</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Playlist Recents -->
+
+            <div class="p-2 ml-1 mt-4 pr-4">
+              <h2 class="font-semibold text-3xl">Recently played</h2>
+
+              <div class="grid grid-cols-7 gap-4 mt-4">
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+
+                <a
+                  href=""
+                  class="bg-white/5 p-2 rounded flex flex-col gap-2 hover:bg-white/20"
+                >
+                  <img
+                    class="w-full h-120"
+                    src="./src/public/victorLou.jpeg"
+                    alt=""
+                  />
+
+                  <strong class="font-semibold">Daily Mix</strong>
+                  <span class="text-xs text-zinc-500">Victor Lou</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer
+        class="fixed bottom-0 w-full bg-zinc-950 p-6 flex items-center justify-between mt-0"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            class="w-12 h-14 rounded"
+            src="./src/public/victorLou.jpeg"
+            alt=""
+          />
+          <div class="flex flex-col gap-1">
+            <strong class="font-normal">House Every Weekend</strong>
+            <span class="text-xs">victor Lou</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-2">
+          <div class="flex items-center gap-6">
+            <button>
+              <i class="size-5 text-zinc-200" data-lucide="shuffle"></i>
+            </button>
+            <button>
+              <i class="size-5 text-zinc-200" data-lucide="skip-back"></i>
+            </button>
+            <button
+              class="h-10 w-10 flex items-center justify-center text-black pl-1 rounded-full bg-white"
+            >
+              <i class="" data-lucide="play"></i>
+            </button>
+            <button>
+              <i class="size-5 text-zinc-200" data-lucide="skip-forward"></i>
+            </button>
+            <button>
+              <i class="size-5 text-zinc-200" data-lucide="repeat"></i>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <samp class="text-sm">0:31</samp>
+            <div class="h-1 rounded-full w-96 bg-zinc-600">
+              <div class="bg-slate-200 w-40 h-1 rounded-full"></div>
+            </div>
+            <samp class="text-sm">2:14</samp>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <button><i class="size-5" data-lucide="mic-vocal"></i></button>
+          <button><i class="size-5" data-lucide="list-minus"></i></button>
+          <button><i class="size-5" data-lucide="laptop-minimal"></i></button>
+          <button><i class="size-5" data-lucide="volume-1"></i></button>
+          <div class="h-1 rounded-full w-24 bg-zinc-600">
+            <div class="bg-slate-200 w-10 h-1 rounded-full"></div>
+          </div>
+          <button><i class="size-5" data-lucide="fullscreen"></i></button>
+          <button><i class="size-5" data-lucide="maximize-2"></i></button>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>

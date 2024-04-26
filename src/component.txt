@@ -1,0 +1,149 @@
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-tailwindcss.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>Tailwindcss Play</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-javaScript.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>JavaScript Music</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-typeScript.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>TypeScript Songs</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-react.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>ReactJS Lifestyle</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded bg-white"
+                  src="./src/img/icone-next.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>NextJS Player Musics</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-git.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>Git Every Day</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded bg-slate-400"
+                  src="./src/img/icone-gitHub.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>GitHub Documentation Files</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded bg-white"
+                  src="./src/img/icone-node.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>NodeJS Software Songs</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-mongo.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>MongoDB Data Base Musics</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
+
+              <a href="" class="flex gap-2 items-center">
+                <img
+                  class="w-8 h-8 rounded"
+                  src="./src/img/icone-bootstrap.svg"
+                  alt="Ícone"
+                />
+                <span class="flex flex-col text-zinc-400 hover:text-zinc-100">
+                  <span>Bootstrap Layout Player</span>
+                  <div class="flex items-center gap-1">
+                    <!-- <i class="w-3 h-3" data-lucide="pin"></i> -->
+                    <span class="text-xs"> Playlist João Batista</span>
+                  </div>
+                </span>
+              </a>
